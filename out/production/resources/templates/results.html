@@ -8,16 +8,15 @@
 
 <div class="container body-content">
 
-    <h1 th:text="${#strings.capitalizeWords(title)}"></h1>
+    <h2>Results for <span th:text="${searchType}"></span> on <span th:text="${searchTerm}"></span></h2>
 
-    <h2 th:text="${title}">/h2>
-
-    <div th:each="item : ${jobs}">
+    <div th:each="item : ${output}">
         <h4>Job</h4>
         <div th:each="pair : ${item}">
             <span th:text="${pair.key}"></span>: <span th:text="${pair.value}"></span>
         </div>
     </div>
+
 
 </div>
 
