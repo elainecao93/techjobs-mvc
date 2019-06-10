@@ -10,12 +10,11 @@
 
     <h2>Results for <span th:text="${searchType}"></span> on <span th:text="${searchTerm}"></span></h2>
 
-    <div th:each="item : ${output}">
-        <h4>Job</h4>
-        <div th:each="pair : ${item}">
-            <span th:text="${pair.key}"></span>: <span th:text="${pair.value}"></span>
-        </div>
-    </div>
+    <table th:each="item : ${output}">
+        <tr th:each="pair : ${item}">
+            <td th:text="${pair.key}"></td> <td th:text="${pair.value}"></td>
+        </tr>
+    </table>
 
 
 </div>

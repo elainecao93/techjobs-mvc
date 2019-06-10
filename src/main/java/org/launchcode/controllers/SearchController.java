@@ -23,8 +23,6 @@ public class SearchController {
         return "search";
     }
 
-    // TODO #1 - Create handler to process search request and display results
-
     @RequestMapping(value = "results")
     public String searchResults(Model model, HttpServletRequest request) {
 
@@ -49,7 +47,7 @@ public class SearchController {
         model.addAttribute("searchTerm", searchTerm);
         model.addAttribute("output", output);
 
-        return "results"; //TODO
+        return "results";
     }
 
 }
